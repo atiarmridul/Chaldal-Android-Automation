@@ -3,7 +3,8 @@
 This is a Chaldal app user flow-checking test case execution. Here, we open the app, search for a product, add the product to the cart, set the quantity to three, and return to the search page. Then, we go to the cart page, set the previously added product quantity to zero, and verify that the cart is empty with the empty cart message. Then, we close the app gracefully.
 
 
-I used WebdriverIO as a local runner, Mocha as a test runner, and Appium as a service. Node.js with WebdriverIO allows for efficient, scalable, and maintainable test automation. 
+## I used WebdriverIO as a local runner, Mocha as a test runner, and Appium as a service. I used Node.js with WebdriverIO allows for efficient, scalable, and maintainable test automation. 
+## Page Object Model (POM) is used as the design pattern. 
 
 ## Features
 
@@ -51,11 +52,12 @@ Show Report
 
 ## Tech Stack
 
-- WebdriverIo 8.x
-- Appium 2.x
-- Node.js 18.x
-- NPM 10.x
+- WebdriverIo 8. x
+- Appium 2. x
+- Node.js 18. x
+- NPM 10. x
 - Test Runner: Mocha
+- Design Pattern: POM
 
 ## Tools Used
 
