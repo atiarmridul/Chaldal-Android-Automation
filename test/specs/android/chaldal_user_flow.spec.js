@@ -5,6 +5,7 @@ import chaldalScreen from "../../screenobjects/android/chaldal.screen.js";
 
 describe("Chaldal Application User flow creation", () => {
   before(async () => {
+    // Open/install the Chaldal Application on your device
     await driver.pause(15000);
   });
 
@@ -12,40 +13,39 @@ describe("Chaldal Application User flow creation", () => {
     allureReporter.addDescription(
       "This a Chaldal app user flow checking test case execution. Here we open the app, search a product, add the product into the cart, set quantity to three, return to search page. Then we go to cart page, set the previously added product quantity to zero and verify the cart is empty with the empty cart message. Then we close the app gracelully."
     );
-    allureReporter.addStep("Open the app & Click on the search icon");
 
+    // Search for the item “toothbrush”
     await chaldalScreen.clickSearchButton.waitForEnabled();
     await chaldalScreen.clickSearchButton.click();
 
-    allureReporter.addStep("Search with a product name");
     await chaldalScreen.inputSearchText.waitForEnabled();
     await chaldalScreen.inputSearchText.addValue("toothbrush");
     await browser.keys("Enter");
+    await driver.pause(3000);
 
+    // Scroll down to an item and Open the Item screen
     await $(
-      "android=new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(1,5)"
+      'android=new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView("ProDentalB Rice Husk Toothbrush")'
     );
-
-    allureReporter.addStep(
-      "Select a product from the search result list and go to its details page"
-    );
+  
     await chaldalScreen.selectProduct.waitForEnabled({ timeout: 10000 });
     await chaldalScreen.selectProduct.click();
 
-    allureReporter.addStep("Increase the product quantity from 0 to 3");
+    // Verify the product details page is opened.
+    await expect(chaldalScreen.buyNowButton).toExist();
+    
+    // Click the Plus (+) icon 3 times to add to the cart.
     await chaldalScreen.increseQuantity();
-
-    allureReporter.addStep("Return to search result page");
     await driver.back();
 
-    allureReporter.addStep("Go to cart page");
+    // Go to the cart screen from the top
     await chaldalScreen.cartButton.waitForEnabled({ timeout: 3000 });
     await chaldalScreen.cartButton.click();
 
-    allureReporter.addStep("decrease the product quantity from 3 to 0");
+    // Click the Minus (-) icon to empty the card
     await chaldalScreen.reduceQuantity();
 
-    allureReporter.addStep("Verify that cart page is showing expected message");
+    // Verify Text “Nothing to see here” on cart screen after removing items
     const expectEmptyCartText = "Nothing to see here";
     await chaldalScreen.emptyCartMessage.waitForEnabled();
     const actualEmptyCartText = await chaldalScreen.emptyCartMessage.getText();
@@ -53,7 +53,7 @@ describe("Chaldal Application User flow creation", () => {
   });
 
   after(async () => {
-    allureReporter.addStep("Close the app gracefully");
+    // Close the applicatio
     await chaldalScreen.tearDown();
   });
 });

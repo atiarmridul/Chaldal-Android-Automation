@@ -14,7 +14,11 @@ class chaldalScreen {
   }
 
   get selectProduct() {
-    return $("(//android.view.ViewGroup)[5]");
+    return $("(//android.view.ViewGroup)[1]");
+  }
+
+  get buyNowButton(){
+    return $('//android.widget.TextView[@text="Buy Now"]');
   }
 
   get moreQuantity() {
