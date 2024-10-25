@@ -27,13 +27,13 @@ describe("Chaldal Application User flow creation", () => {
     await $(
       'android=new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView("ProDentalB Rice Husk Toothbrush")'
     );
-  
+
     await chaldalScreen.selectProduct.waitForEnabled({ timeout: 10000 });
     await chaldalScreen.selectProduct.click();
 
     // Verify the product details page is opened.
     await expect(chaldalScreen.buyNowButton).toExist();
-    
+
     // Click the Plus (+) icon 3 times to add to the cart.
     await chaldalScreen.increseQuantity();
     await driver.back();

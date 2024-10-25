@@ -2,11 +2,8 @@
 
 This is a Chaldal app user flow-checking test case execution. Here, we open the app, search for a product, add the product to the cart, set the quantity to three, and return to the search page. Then, we go to the cart page, set the previously added product quantity to zero, and verify that the cart is empty with the empty cart message. Then, we close the app gracefully.
 
-
-## I used WebdriverIO as a local runner, Mocha as a test runner, and Appium as a service. I used Node.js with WebdriverIO allows for efficient, scalable, and maintainable test automation. 
-## Page Object Model (POM) is used as the design pattern. 
-
-## Features
+## I used WebdriverIO as a local runner, Mocha as a test runner, and Appium as a service. I used Node.js with WebdriverIO allows for efficient, scalable, and maintainable test automation.
+## Page Object Model (POM) is used as the design pattern.
 
 - Auto Grant Permission.
 - So to search page.
@@ -24,29 +21,27 @@ Clone the project
 
 ```bash {"id":"01J7TWY4RKEYT0E8W8P4QQK3KR"}
   git clone https://github.com/atiarmridul/Chaldal-Android-Automation.git
-
 ```
 
 Install dependencies
 
 ```bash {"id":"01J7TWY4RKEYT0E8W8P7Q1J3BH"}
   npm install
-
 ```
 
 Start the test
 
 ```bash {"id":"01J7TWY4RKEYT0E8W8P99KNTTW"}
   npm run wdio
-
 ```
 
 Show Report
 
 ```bash {"id":"01J7TX353VH5ZPK2XEH83HJW23"}
   allure generate --clean allure-results
+```
 
-  
+```bash
   allure open
 ```
 
@@ -70,8 +65,8 @@ Show Report
 
 ## Appendix
 
-1. Set JAVA_HOME 
-2. Set ANDROID_HOME 
+1. Set JAVA_HOME
+2. Set ANDROID_HOME
 3. Add your emulator name in "appium:deviceName" in capabilities found in the wdio.conf.js file.
 4. Add your emulator platform version in "appium:platformVersion" in capabilities found in the wdio.conf.js file.
 
@@ -85,6 +80,7 @@ Show Report
         "appium:autoGrantPermissions": true
 
     }]
+
 
 
 ```

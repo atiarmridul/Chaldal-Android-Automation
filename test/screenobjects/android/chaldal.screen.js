@@ -17,7 +17,7 @@ class chaldalScreen {
     return $("(//android.view.ViewGroup)[1]");
   }
 
-  get buyNowButton(){
+  get buyNowButton() {
     return $('//android.widget.TextView[@text="Buy Now"]');
   }
 
