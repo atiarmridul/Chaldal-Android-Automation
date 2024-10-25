@@ -54,7 +54,7 @@ class chaldalScreen {
     await this.minusButton.click();
   }
 
-  async closeApp() {
+  async tearDown() {
     await driver.back();
     await driver.back();
     await driver.back();

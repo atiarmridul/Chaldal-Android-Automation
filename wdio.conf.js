@@ -34,11 +34,9 @@ export const config = {
       platformName: "Android",
       "appium:deviceName": "R58R777L6JL",
       "appium:platformVersion": "14.0",
-      // "appium:deviceName": "emulator-5554",
-      // "appium:platformVersion": "11.0",
       "appium:automationName": "UiAutomator2",
-      "appium:appPackage": "com.chaldal.poached",
-      "appium:appActivity": "com.chaldal.poached.MainActivity",
+      // "appium:appPackage": "com.chaldal.poached",
+      // "appium:appActivity": "com.chaldal.poached.MainActivity",
       "appium:app": path.join(process.cwd(), "./app/android/Chaldal.apk"),
       "appium:autoGrantPermissions": true,
       "appium:enforceXPath1": true
@@ -76,7 +74,7 @@ export const config = {
     }
 },
 
-  framework: "mocha",
+
 
   reporters: [
     'spec',        
@@ -86,6 +84,8 @@ export const config = {
     disableWebdriverScreenshotsReporting: false,
 }],
 ],
+
+  framework: "mocha",
 
   mochaOpts: {
     ui: "bdd",

@@ -1,5 +1,10 @@
 # Chaldal Android Mobile Application Automation
 
+This a Chaldal app user flow checking test case execution. Here we open the app, search a product, add the product into the cart, set quantity to three, return to search page. Then we go to cart page, set the previously added product quantity to zero and verify the cart is empty with the empty cart message. Then we close the app gracelully.
+
+
+- We used WebdriverIO as local runner, Mocha as test runner and Appium as a service. Also Node.js with WebdriverIO is used to allows for efficient, scalable, and maintainable test automation. 
+
 ## Features
 
 - Auto Grant Permission.
@@ -17,7 +22,7 @@
 Clone the project
 
 ```bash {"id":"01J7TWY4RKEYT0E8W8P4QQK3KR"}
-
+  git clone https://github.com/atiarmridul/Chaldal-Android-Automation.git
 
 ```
 
@@ -38,9 +43,10 @@ Start the test
 Show Report
 
 ```bash {"id":"01J7TX353VH5ZPK2XEH83HJW23"}
-allure generate --clean allure-results
+  allure generate --clean allure-results
 
-allure open
+  
+  allure open
 ```
 
 ## Tech Stack
@@ -62,8 +68,8 @@ allure open
 
 ## Appendix
 
-1. Set JAVA_HOME
-2. Set ANDROID_HOME
+1. Set JAVA_HOME [If using a emulator]
+2. Set ANDROID_HOME [If using a emulator]
 3. Add your emulator name in "appium:deviceName" in capabilities found in the wdio.conf.js file.
 4. Add your emulator platform version in "appium:platformVersion" in capabilities found in the wdio.conf.js file.
 
