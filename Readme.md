@@ -1,18 +1,18 @@
 # Chaldal Android Mobile Application Automation
 
-This a Chaldal app user flow checking test case execution. Here we open the app, search a product, add the product into the cart, set quantity to three, return to search page. Then we go to cart page, set the previously added product quantity to zero and verify the cart is empty with the empty cart message. Then we close the app gracelully.
+This is a Chaldal app user flow-checking test case execution. Here, we open the app, search for a product, add the product to the cart, set the quantity to three, and return to the search page. Then, we go to the cart page, set the previously added product quantity to zero, and verify that the cart is empty with the empty cart message. Then, we close the app gracefully.
 
 
-- We used WebdriverIO as local runner, Mocha as test runner and Appium as a service. Also Node.js with WebdriverIO is used to allows for efficient, scalable, and maintainable test automation. 
+I used WebdriverIO as a local runner, Mocha as a test runner, and Appium as a service. Node.js with WebdriverIO allows for efficient, scalable, and maintainable test automation. 
 
 ## Features
 
 - Auto Grant Permission.
 - So to search page.
-- Search a product.
-- Select a product from search result and go to details page.
-- Add the product to cart with quantity 3
-- Return to Search page and go to cart page.
+- Search for a product.
+- Select a product from the search result and go to the details page.
+- Add the product to the cart with quantity 3
+- Return to the Search page and go to the Cart page.
 - Reduce the product quantity from 3 to 0.
 - Verify the empty card page message.
 - Close the app.
@@ -68,8 +68,8 @@ Show Report
 
 ## Appendix
 
-1. Set JAVA_HOME [If using a emulator]
-2. Set ANDROID_HOME [If using a emulator]
+1. Set JAVA_HOME 
+2. Set ANDROID_HOME 
 3. Add your emulator name in "appium:deviceName" in capabilities found in the wdio.conf.js file.
 4. Add your emulator platform version in "appium:platformVersion" in capabilities found in the wdio.conf.js file.
 
