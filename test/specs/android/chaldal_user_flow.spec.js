@@ -4,10 +4,8 @@ import allureReporter from "@wdio/allure-reporter";
 import chaldalScreen from "../../screenobjects/android/chaldal.screen.js";
 
 describe("Chaldal Application User flow creation", () => {
-  before(async () => {
-    // Open/install the Chaldal Application on your device
-    await driver.pause(15000);
-  });
+  // before(async () => {
+  // });
 
   it("Search product, add to cart and delete from cart.", async () => {
     allureReporter.addDescription(
@@ -21,7 +19,7 @@ describe("Chaldal Application User flow creation", () => {
     await chaldalScreen.inputSearchText.waitForEnabled();
     await chaldalScreen.inputSearchText.addValue("toothbrush");
     await browser.keys("Enter");
-    await driver.pause(3000);
+    await driver.pause(5000);
 
     // Scroll down to an item and Open the Item screen
     await $(

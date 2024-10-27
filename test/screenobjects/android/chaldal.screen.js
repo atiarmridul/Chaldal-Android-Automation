@@ -1,4 +1,4 @@
-import { $, $$, driver, expect } from "@wdio/globals";
+import { $, driver } from "@wdio/globals";
 
 class chaldalScreen {
   get clickSearchButton() {
@@ -14,7 +14,7 @@ class chaldalScreen {
   }
 
   get selectProduct() {
-    return $("(//android.view.ViewGroup)[1]");
+    return $("(//android.view.ViewGroup)[5]");
   }
 
   get buyNowButton() {
@@ -63,6 +63,7 @@ class chaldalScreen {
     await driver.back();
     await driver.back();
     await driver.dismissAlert();
+ 
   }
 }
 

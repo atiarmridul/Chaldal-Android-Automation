@@ -38,6 +38,7 @@ export const config = {
       "appium:app": path.join(process.cwd(), "./app/android/Chaldal.apk"),
       "appium:autoGrantPermissions": true,
       "appium:enforceXPath1": true,
+      "appium:noReset": true,
     },
   ],
 
@@ -86,7 +87,7 @@ export const config = {
       "allure",
       {
         outputDir: "allure-results",
-        disableWebdriverStepsReporting: true,
+        disableWebdriverStepsReporting: false,
         disableWebdriverScreenshotsReporting: false,
       },
     ],
