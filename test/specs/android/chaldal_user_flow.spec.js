@@ -4,9 +4,7 @@ import allureReporter from "@wdio/allure-reporter";
 import chaldalScreen from "../../screenobjects/android/chaldal.screen.js";
 
 describe("Chaldal Application User flow creation", () => {
-  // before(async () => {
-  // });
-
+ 
   it("Search product, add to cart and delete from cart.", async () => {
     allureReporter.addDescription(
       "This a Chaldal app user flow checking test case execution. Here we open the app, search a product, add the product into the cart, set quantity to three, return to search page. Then we go to cart page, set the previously added product quantity to zero and verify the cart is empty with the empty cart message. Then we close the app gracelully."
