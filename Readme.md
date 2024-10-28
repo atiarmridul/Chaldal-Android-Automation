@@ -4,7 +4,7 @@ This is a Chaldal app user flow-checking test case execution. Here, we open the 
 
 ## I used WebdriverIO as a Local runner, Mocha as a Test runner, Appium as a Service, and Page Object Model (POM) as the Design pattern. I used Node.js with WebdriverIO which allows efficient, scalable, and maintainable test automation. 
 
-## Screen-recorded Demo: https://tinyurl.com/3c5xu8ps
+## Screen-recorded Demo: https://tinyurl.com/3t7kvw7d
 
 ## Features List 
 
