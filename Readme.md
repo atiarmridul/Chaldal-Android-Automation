@@ -139,3 +139,33 @@ To run tests, run the following command
 - [Appium](https://appium.io/)
 - [Node.js](https://nodejs.org/en)
 - [Allure Report](https://docs.qameta.io/allure/)
+
+## Troubleshooting
+
+- **Emulator not detected:** Ensure your emulator is running and properly configured in Android Studio.
+- **Appium server issues:** Make sure Appium is installed globally and running (`appium` command).
+- **JAVA_HOME/ANDROID_HOME errors:** Double-check your environment variables are set correctly.
+
+## Configuration
+
+You can customize test capabilities in `wdio.conf.js`:
+- Change device name and platform version as needed.
+- Update the path to your APK if the location changes.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, reach out via [GitHub Issues](https://github.com/atiarmridul/Chaldal-Android-Automation/issues).
+
+## References
+
+- [WebdriverIO Docs](https://webdriver.io/docs/gettingstarted)
+- [Appium Docs](https://appium.io/docs/en/about-appium/intro/)
+- [Allure Report Docs](https://docs.qameta.io/allure/)
