@@ -2,6 +2,29 @@
 
 This is a Chaldal app user flow-checking test case execution. Here, we open the app, search for a product, add the product to the cart, set the quantity to three, and return to the search page. Then, we go to the cart page, set the previously added product quantity to zero, and verify that the cart is empty with the empty cart message. Then, we close the app gracefully.
 
+## Project Structure
+
+```
+/Users/atiarrahmanchowdhury/Chaldal-Android-Automation/
+├───.gitignore
+├───jsconfig.json
+├───package-lock.json
+├───package.json
+├───Readme.md
+├───wdio.conf.js
+├───.git/...
+├───app/
+│   └───android/
+│       └───Chaldal.apk
+└───test/
+    ├───screenobjects/
+    │   └───android/
+    │       └───chaldal.screen.js
+    └───specs/
+        └───android/
+            └───chaldal_user_flow.spec.js
+```
+
 ## Features List
 
 - Auto Grant Permission.
@@ -13,6 +36,15 @@ This is a Chaldal app user flow-checking test case execution. Here, we open the 
 - Reduce the product quantity from 3 to 0.
 - Verify the empty card page message.
 - Close the app.
+
+## Tech Stack
+
+- WebdriverIo 9.x
+- Appium 2.x
+- Node.js 18.x
+- NPM 10.x
+- Mocha
+- Java 19.x
 
 ## Getting Started
 
@@ -37,14 +69,6 @@ Install dependencies
   npm install
 ```
 
-## Usage
-
-Start the test
-
-```bash
-  npm run wdio
-```
-
 ## Running Tests
 
 To run tests, run the following command
@@ -63,33 +87,17 @@ To run tests, run the following command
   allure open
 ```
 
-## Tech Stack
+## Configuration
 
-- WebdriverIo 9.x
-- Appium 2.x
-- Node.js 18.x
-- NPM 10.x
-- Mocha
-- Java 19.x
+You can customize test capabilities in `wdio.conf.js`:
+- Change device name and platform version as needed.
+- Update the path to your APK if the location changes.
 
-## Dependencies
+## Troubleshooting
 
-- allure: ^0.0.0
-- allure-commandline: ^2.30.0
-- appium-uiautomator2-driver: ^3.7.9
-
-## Dev Dependencies
-
-- @wdio/allure-reporter: ^9.1.3
-- @wdio/appium-service: ^8.38.2
-- @wdio/cli: ^8.38.2
-- @wdio/local-runner: ^8.38.2
-- @wdio/mocha-framework: ^8.38.2
-- @wdio/spec-reporter: ^8.38.2
-- appium: ^2.5.0
-- kill-port: ^2.0.1
-- ts-node: ^10.9.2
-- webdriverio: ^9.0.9
+- **Emulator not detected:** Ensure your emulator is running and properly configured in Android Studio.
+- **Appium server issues:** Make sure Appium is installed globally and running (`appium` command).
+- **JAVA_HOME/ANDROID_HOME errors:** Double-check your environment variables are set correctly.
 
 ## Appendix
 
@@ -110,47 +118,24 @@ To run tests, run the following command
     }]
 ```
 
-## Project Structure
+## Dependencies
 
-```
-/Users/atiarrahmanchowdhury/Chaldal-Android-Automation/
-├───.gitignore
-├───jsconfig.json
-├───package-lock.json
-├───package.json
-├───Readme.md
-├───wdio.conf.js
-├───.git/...
-├───app/
-│   └───android/
-│       └───Chaldal.apk
-└───test/
-    ├───screenobjects/
-    │   └───android/
-    │       └───chaldal.screen.js
-    └───specs/
-        └───android/
-            └───chaldal_user_flow.spec.js
-```
+- allure: ^0.0.0
+- allure-commandline: ^2.30.0
+- appium-uiautomator2-driver: ^3.7.9
 
-## Acknowledgements
+## Dev Dependencies
 
-- [WebdriverIO](https://webdriver.io/)
-- [Appium](https://appium.io/)
-- [Node.js](https://nodejs.org/en)
-- [Allure Report](https://docs.qameta.io/allure/)
-
-## Troubleshooting
-
-- **Emulator not detected:** Ensure your emulator is running and properly configured in Android Studio.
-- **Appium server issues:** Make sure Appium is installed globally and running (`appium` command).
-- **JAVA_HOME/ANDROID_HOME errors:** Double-check your environment variables are set correctly.
-
-## Configuration
-
-You can customize test capabilities in `wdio.conf.js`:
-- Change device name and platform version as needed.
-- Update the path to your APK if the location changes.
+- @wdio/allure-reporter: ^9.1.3
+- @wdio/appium-service: ^8.38.2
+- @wdio/cli: ^8.38.2
+- @wdio/local-runner: ^8.38.2
+- @wdio/mocha-framework: ^8.38.2
+- @wdio/spec-reporter: ^8.38.2
+- appium: ^2.5.0
+- kill-port: ^2.0.1
+- ts-node: ^10.9.2
+- webdriverio: ^9.0.9
 
 ## Contributing
 
@@ -159,6 +144,13 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 ## License
 
 This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [WebdriverIO](https://webdriver.io/)
+- [Appium](https://appium.io/)
+- [Node.js](https://nodejs.org/en)
+- [Allure Report](https://docs.qameta.io/allure/)
 
 ## Contact
 
