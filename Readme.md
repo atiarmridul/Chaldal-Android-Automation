@@ -133,18 +133,6 @@ To run tests, run the following command
             └───chaldal_user_flow.spec.js
 ```
 
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
 ## Acknowledgements
 
 - [WebdriverIO](https://webdriver.io/)
