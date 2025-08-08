@@ -87,3 +87,25 @@ Show Report
 
 
 ```
+
+## Project Structure
+```
+/Users/atiarrahmanchowdhury/Chaldal-Android-Automation/
+├───.gitignore
+├───jsconfig.json
+├───package-lock.json
+├───package.json
+├───Readme.md
+├───wdio.conf.js
+├───.git/...
+├───app/
+│   └───android/
+│       └───Chaldal.apk
+└───test/
+    ├───screenobjects/
+    │   └───android/
+    │       └───chaldal.screen.js
+    └───specs/
+        └───android/
+            └───chaldal_user_flow.spec.js
+```
